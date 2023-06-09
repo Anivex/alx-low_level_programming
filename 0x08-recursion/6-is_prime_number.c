@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * _is_prime - function that check if input integer is prime or not.
  *
  * @n: input integer.
