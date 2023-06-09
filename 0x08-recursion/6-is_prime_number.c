@@ -35,4 +35,3 @@ int is_prime_number(int n)
 
 	return (_is_prime(n, n - 1));
 }
-
