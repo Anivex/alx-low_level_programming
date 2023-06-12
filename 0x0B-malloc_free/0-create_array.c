@@ -23,7 +23,7 @@ char *create_array(unsigned int size, char c)
 
 	while (size < 0)
 	{
-		--size;
+		size = size - 1;
 		arr[size] = c;
 	}
 	free(arr);
