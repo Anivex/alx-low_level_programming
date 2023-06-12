@@ -1,4 +1,4 @@
-#include "main_h"
+#include "main.h"
 
 /**
  * alloc_grid - function that make a 2 dimensional array of integer.
