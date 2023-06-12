@@ -11,7 +11,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int i, k, **arr;
+	int i, **arr;
 
 	if (width < 1 || height < 1)
 		return (NULL);
