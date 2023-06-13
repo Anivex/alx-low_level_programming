@@ -75,7 +75,7 @@ int allocate_wstr(char **s, char *str)
 		}
 	}
 	if (is_space == 1)
-		s[wc] = malloc(sizeof(char) * (wl + ));
+		s[wc] = malloc(sizeof(char) * (wl + 1));
 	return (0);
 }
 
