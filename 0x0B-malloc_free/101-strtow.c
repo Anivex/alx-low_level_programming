@@ -98,7 +98,7 @@ char **strtow(char *str)
 	wc = count_winstr(str);
 	if (wc == 0)
 		return (NULL);
-	s = malloc(sizeof(char *) * (wc + 1));
+	s = malloc(sizeof(char *) * (wc));
 	if (s == NULL)
 		return (NULL);
 
