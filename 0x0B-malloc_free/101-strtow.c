@@ -27,7 +27,7 @@ int count_winstr(char *str)
 			}
 		}
 	}
-	if (str[i - 1] != ' ')
+	if (is_space == 1)
 		wc++;
 	return (wc);
 }
