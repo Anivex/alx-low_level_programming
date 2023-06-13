@@ -102,7 +102,6 @@ char **strtow(char *str)
 	i = allocate_wstr(s, str);
 	if (i == 1)
 		return (NULL);
-
 	/* copy words from string to a newly allocated space*/
 	for (i = 0, wc = 0, wl = 0, is_space = 0; str[i] != '\0'; i++)
 	{
@@ -114,7 +113,6 @@ char **strtow(char *str)
 			is_space = 0;
 			continue;
 		}
-
 		if (str[i] == ' ')
 			is_space = 0;
 		else
@@ -124,6 +122,7 @@ char **strtow(char *str)
 			is_space = 1;
 		}
 	}
-
+	if (str[i - 1] != ' ')
+		s[wc][wl] = '\0';
 	return (s);
 }
