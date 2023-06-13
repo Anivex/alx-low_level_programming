@@ -49,7 +49,7 @@ int allocate_wstr(char **s, char *str)
 	{
 		if (str[i] == ' ' && is_space == 1)
 		{
-			s[wc] = malloc(sizeof(char) * (wl + 1));
+			s[wc] = malloc(sizeof(char) * (wl));
 			if (s[wc] == NULL)
 			{
 				while (wc < 0)
@@ -98,7 +98,7 @@ char **strtow(char *str)
 	wc = count_winstr(str);
 	if (wc == 0)
 		return (NULL);
-	s = malloc(sizeof(char *) * (wc));
+	s = malloc(sizeof(char *) * (wc + 1));
 	if (s == NULL)
 		return (NULL);
 
