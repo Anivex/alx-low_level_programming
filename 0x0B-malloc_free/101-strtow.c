@@ -27,6 +27,8 @@ int count_winstr(char *str)
 			}
 		}
 	}
+	if (is_space == 1)
+		wc++;
 	return (wc);
 }
 
