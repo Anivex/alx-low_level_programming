@@ -27,8 +27,8 @@ int count_winstr(char *str)
 			}
 		}
 	}
-	if (is_space == 1)
-		wc++;
+	// if (is_space == 1)
+	// 	wc++;
 	return (wc);
 }
 
@@ -49,7 +49,7 @@ int allocate_wstr(char **s, char *str)
 	{
 		if (str[i] == ' ' && is_space == 1)
 		{
-			s[wc] = malloc(sizeof(char) * (wl));
+			s[wc] = malloc(sizeof(char) * (wl + 1));
 			if (s[wc] == NULL)
 			{
 				while (wc < 0)
