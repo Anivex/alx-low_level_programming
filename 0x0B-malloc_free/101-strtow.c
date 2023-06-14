@@ -60,6 +60,7 @@ int allocate_wstr(char **s, char *str)
 			}
 			wc++;
 			is_space = 0;
+			wl = 0;
 			continue;
 		}
 
