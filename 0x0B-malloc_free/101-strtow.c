@@ -27,8 +27,6 @@ int count_winstr(char *str)
 			}
 		}
 	}
-	if (str[i - 1] != ' ')
-		wc++;
 	return (wc);
 }
 
@@ -62,6 +60,7 @@ int allocate_wstr(char **s, char *str)
 			}
 			wc++;
 			is_space = 0;
+			wl = 0;
 			continue;
 		}
 
@@ -74,7 +73,7 @@ int allocate_wstr(char **s, char *str)
 			is_space = 1;
 		}
 	}
-	if (str[i - 1] != ' ')
+	if (is_space == 1)
 		s[wc] = malloc(sizeof(char) * (wl + 1));
 	return (0);
 }
@@ -126,7 +125,7 @@ char **strtow(char *str)
 			is_space = 1;
 		}
 	}
-	if (str[i - 1] != ' ')
+	if (is_space == 1)
 		s[wc][wl] = '\0';
 	return (s);
 }
