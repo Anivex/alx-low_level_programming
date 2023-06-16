@@ -1,6 +1,27 @@
 #include "main.h"
 
 /**
+ * _strlen - count length of string passed.
+ *
+ * @str: string passe.
+ *
+ * Return: a number of length.
+ */
+
+int _strlen(char *str)
+{
+	int i;
+
+	if (str == NULL || *str == '\0')
+		return (0);
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	return (i);
+}
+
+/**
  * string_nconcat - function that concatenates two strings.
  *
  * @s1: first string.
