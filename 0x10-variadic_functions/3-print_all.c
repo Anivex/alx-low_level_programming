@@ -20,20 +20,20 @@ void print_all(const char * const format, ...)
 		{
 			case 'c':
 				printf("%s%c", separator, va_arg(ap, int));
-				// printf("%s", format[i + 1] == '\0' ? "" : ", ");
+				/* printf("%s", format[i + 1] == '\0' ? "" : ", ");*/
 				break;
 			case 'i':
 				printf("%s%i", separator, va_arg(ap, int));
-				// printf("%s", format[i + 1] == '\0' ? "" : ", ");
+				/* printf("%s", format[i + 1] == '\0' ? "" : ", ");*/
 				break;
 			case 'f':
 				printf("%s%f", separator, va_arg(ap, double));
-				// printf("%s", format[i + 1] == '\0' ? "" : ", ");
+				/* printf("%s", format[i + 1] == '\0' ? "" : ", ");*/
 				break;
 			case 's':
 				s = va_arg(ap, char *);
 				printf("%s%s", separator, s ? s : "(nil)");
-				// printf("%s", format[i + 1] != '\0' && s ? ", " : "");
+				/* printf("%s", format[i + 1] != '\0' && s ? ", " : ""); */
 				break;
 		}
 		separator = ", ";
