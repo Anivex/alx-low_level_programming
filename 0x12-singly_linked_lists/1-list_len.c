@@ -1,4 +1,4 @@
-#inlcude "lists.h"
+#include "lists.h"
 
 /**
  * list_len - function calcule length of list.
@@ -14,8 +14,8 @@ size_t list_len(const list_t *h)
 
 	while (h)
 	{
-		size++;
 		h = h->next;
+		size++;
 	}
 
 	return (size);
