@@ -1,21 +1,22 @@
-#include "lists.h"
+#inlcude "lists.h"
 
 /**
- * list_len - function that prints number of elements of a list_t list.
+ * list_len - function calcule length of list.
  *
- * @h: head.
+ * @h: head of single list.
  *
- * Return: the number of nodes.
+ * Return: the number of elements.
  */
 
 size_t list_len(const list_t *h)
 {
-	size_t i = 0;
+	size_t size = 0;
 
 	while (h)
 	{
+		size++;
 		h = h->next;
-		i++;
 	}
-	return (i);
+
+	return (size);
 }
