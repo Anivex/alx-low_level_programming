@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 {
 
 	unsigned int u;
-	int len, i;
+	int len, i, j, pow;
 
 	if (!b)
 		return (0);
@@ -22,7 +22,9 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		u += ((int)(b[i]) - 48) * (len - i - 1);
+		for (j = 0, pow = 1; j < (len - i); j++)
+			pow *= 2;
+		u += ((int)(b[i]) - 48) * (pow);
 	}
 
 	return (u);
